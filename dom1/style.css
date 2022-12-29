@@ -1,0 +1,22 @@
+*body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    width: 50%;
+    height: 250px;
+   background-color: #ddd;
+   margin: 20px;
+   padding: 20px;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+}
+.right-box{
+    
+}

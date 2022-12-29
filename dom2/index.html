@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="Progress">
+      <div id="click">10%</div>
+    </div>
+
+    <br />
+    <button onclick="move()">added 10%</button>
+    <script>
+      var i = 0;
+      function move() {
+        if (i == 0) {
+          i = 1;
+          let elem = document.getElementById("click");
+          let width = 10;
+          let id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              elem.style.width = width + "%";
+              elem.innerHTML = width + "%";
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
